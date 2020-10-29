@@ -9,7 +9,7 @@
 // When the time area is clicked, the user enters in a sentence detailing their planned day.
 // the blue button on the right allows the sentence to be saved.
 
-// local storage, so look up the documentation
+// local storage, so look up the documentation, still not understanding
 $("#hour9 .description").val(localStorage.getItem("hour9"));
 $("#hour10 .description").val(localStorage.getItem("hour10"));
 $("#hour11 .description").val(localStorage.getItem("hour11"));
@@ -30,3 +30,6 @@ $(document).ready(function () {
     localStorage.setItem(time, text);
   });
 });
+
+// also when you see this finish homework 6 and 7 adn ofc do the same thing to up them grades
+// need to catch up to the latest homework by Sunday night, also depends on Thursdays meeting
