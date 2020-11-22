@@ -9,7 +9,18 @@
 // When the time area is clicked, the user enters in a sentence detailing their planned day.
 // the blue button on the right allows the sentence to be saved.
 
+
+
+// display current time in Javascript
+var date = new Date();
+var n = date.toDateString();
+var time = date.toLocaleTimeString();
+
+// applying the date and time to HTML
+document.getElementById("rightNow").innerHTML = n + ' ' + time;
+
 // local storage, so look up the documentation, still not understanding
+
 $("#hour9 .description").val(localStorage.getItem("hour9"));
 $("#hour10 .description").val(localStorage.getItem("hour10"));
 $("#hour11 .description").val(localStorage.getItem("hour11"));
@@ -21,7 +32,6 @@ $("#hour16 .description").val(localStorage.getItem("hour16"));
 $("#hour17 .description").val(localStorage.getItem("hour17"));
 
 $(document).ready(function () {
-  $("#currentDay").text(moment().format("MMMM Do YYYY, h:mm:ss a"));
   $(".saveBtn").on("click", function () {
     console.log(this);
     var text = $(this).siblings(".description").val();
@@ -31,5 +41,3 @@ $(document).ready(function () {
   });
 });
 
-// also when you see this finish homework 6 and 7 adn ofc do the same thing to up them grades
-// need to catch up to the latest homework by Sunday night, also depends on Thursdays meeting
