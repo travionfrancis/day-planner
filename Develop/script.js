@@ -11,6 +11,24 @@
 
 
 
+
+
+// Restarting the Javascript after this commit
+
+$(document).ready(function () {
+    // save button actually will save on click
+    $(".saveBtn").on("click", function () {
+        var time = $(this).parent().attr("id");
+        var text = $(this).siblings(".description").val();
+        
+        localStorage.setItem(time, text);
+    });
+
+    $("#hour9 .description").val(localStorage.getItem("hour9"));
+
+});
+
+
 // display current time in Javascript
 var date = new Date();
 var n = date.toDateString();
@@ -18,5 +36,3 @@ var time = date.toLocaleTimeString();
 
 // applying the date and time to HTML
 document.getElementById("rightNow").innerHTML = n + ' ' + time;
-
-// Restarting the Javascript after this commit
